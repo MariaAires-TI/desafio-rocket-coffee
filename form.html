@@ -34,41 +34,41 @@
     </header>
 
     <main>
-        <form action="" method="get">
+
             <div class="data">
                 <h1>Preencha seus dados</h1>
                 <div>
-                    <label for="nome">Nome:</label>
-                    <input class="input-data" type="text" id="nome" required />
+                    <label>Nome:</label>
+                    <input class="input-data" type="text" id="name"  />
                 </div>
     
                 <div>
-                    <label for="email">E-mail:</label>
-                    <input class="input-data" type="email" id="email" required/>
+                    <label>E-mail:</label>
+                    <input class="input-data" type="email" id="email" />
                 </div>
     
                 <div>
-                    <label for="telefone">Contato:</label>            
-                    <input class="input-data" placeholder="(84)98135-4525" type="tel" name="contato" id="contato" required>
+                    <label>Contato:</label>            
+                    <input class="input-data"  keyboardType="numeric" minlength="6"
+                    maxLength="11" placeholder="(84)98135-4525" type="tel" id="contact" >
                 </div>
     
                 <div>
-                    <label for="endereco">Endereço:</label>
-                    <input class="input-data" placeholder="Rua maria carma - bairro chicago - n°22" required type="text" name="rua" id="rua">
+                    <label>Endereço:</label>
+                    <input class="input-data" placeholder="Rua maria carma - bairro chicago - n°22"  type="text" id="address">
                 </div>
-            </div>
-          
+            </div>          
 
             <div class="product">
                 <h2>Escolha seu café</h2>
 
                 <div>
                     <div class="coffe">
-                        <label for="tipoCafe">Chocolatto</label>
-                        <input type="checkbox" name="chocolatto" id="chocollato">
+                        <label>Chocolatto</label>
+                        <input type="checkbox" id="chocollato">
     
-                        <label for="quantidade">Quantidade</label>
-                        <select name="" id="quantidade">
+                        <label>Quantidade</label>
+                        <select id="quantityChocollato">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -79,11 +79,11 @@
                     </div>
     
                     <div class="coffe">
-                        <label for="tipoCafe">Capuccino Avelã</label>
-                        <input type="checkbox" name="capuccino" id="capuccino">
+                        <label>Capuccino Avelã</label>
+                        <input type="checkbox" id="capuccino">
     
-                        <label for="quantidade">Quantidade</label>
-                        <select name="" id="quantidade">
+                        <label>Quantidade</label>
+                        <select id="quantityCapuccino">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -94,11 +94,11 @@
                     </div>
     
                     <div class="coffe">
-                        <label for="tipoCafe">Espresso</label>
-                        <input type="checkbox" name="espresso" id="espresso">
+                        <label>Espresso</label>
+                        <input type="checkbox" id="espresso">
     
-                        <label for="quantidade">Quantidade</label>
-                        <select name="" id="quantidade">
+                        <label>Quantidade</label>
+                        <select id="quantityEspresso">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -109,11 +109,11 @@
                     </div>
     
                     <div class="coffe">
-                        <label for="tipoCafe">Latte Macchiato</label>
-                        <input type="checkbox" name="latte" id="latte">
+                        <label>Latte Macchiato</label>
+                        <input type="checkbox" id="latte">
     
-                        <label for="quantidade">Quantidade</label>
-                        <select name="" id="quantidade">
+                        <label>Quantidade</label>
+                        <select id="quantityLatte">
                             <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -124,18 +124,43 @@
                     </div>
                 </div>
 
-                </div>
-
-                
+            </div>
 
             <div class="comments">
                 <h3>Observações</h3>
-                <textarea placeholder="Digite aqui suas observações" class="input-data" name="" id="" cols="30" rows="10"></textarea>
+                <textarea placeholder="Digite aqui suas observações" class="input-data" id="comentarios" cols="30" rows="10"></textarea>
 
-                <button class="submitbutton" type="submit">Enviar Pedido</button>
+                <button class="submitbutton">Enviar Pedido</button>
+            </div>      
+
+            <div class="order visible">
+                <h1>RESUMO DO PEDIDO</h1>
+                <p>Nome: 
+                    <div class="orderName"></div>
+                </p>
+                <p>E-mail:
+                    <div class="orderEmail"></div>
+                </p>
+                <p>Contato:
+                    <div class="orderContact"></div>
+                </p>
+                <p>Endereço:
+                    <div class="orderAddress"></div>
+                </p>
+
+                <div class="itemCoffe">
+                    <p>Ítens</p>                
+                </div> 
+                <div>              
+                    <p>Observações:
+                        <div class="orderObservacoes"></div>
+                    </p>
+                </div>
+
             </div>
-        </form>
     </main>
+
+   <script src="./index.js"></script>
     
 </body>
 </html>
