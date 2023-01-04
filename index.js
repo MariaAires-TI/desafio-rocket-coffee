@@ -1,5 +1,5 @@
 let order = document.querySelector('.order')
-let submitbutton = document.querySelector('.submitbutton')
+let submitbutton = document.querySelector('#form')
 let divOrderName = document.querySelector('.orderName')
 let divOrderEmail = document.querySelector('.orderEmail')
 let divOrderContact = document.querySelector('.orderContact')
@@ -8,7 +8,23 @@ let divOrderObservacoes = document.querySelector('.orderObservacoes')
 let divItemCoffe = document.querySelector('.itemCoffe')
 
 
-submitbutton.addEventListener('click', (e) => {
+function OrderSummary(cafe, quantidade, checkId){
+    const p = document.createElement('p')
+    p.innerText = `${cafe} - ${quantidade}`
+    divItemCoffe.appendChild(p)
+    document.querySelector(checkId).classList.add('visible')
+}
+
+function checkMensage(id, msn){
+    const p = document.createElement('p')
+    p.innerText = msn
+    const div = document.querySelector(id)
+    div.appendChild(p)
+}
+
+submitbutton.addEventListener('submit', (e) => {
+    e.preventDefault();
+
     let name = document.querySelector('#name').value
     let email = document.querySelector('#email').value
     let contact = document.querySelector('#contact').value
@@ -37,76 +53,62 @@ submitbutton.addEventListener('click', (e) => {
         alert("Seu pedido foi realizado com sucesso. Role a página para ver o resumo")
     }
     
-    function alertSelectCoffee() {
-        alert("Selecione o tipo de café desejado")
-    }
-
-    function alertSelectAmountCoffee() {
-        alert("Selecione a quantidade de café")
-    }
-
     if (haveChocolatto && quantityChocollato > 0) {
-        const p = document.createElement('p')
-        p.innerText = `Chocolatto - ${quantityChocollato}`
-        divItemCoffe.appendChild(p)
-
+        OrderSummary('Chocolatto', quantityChocollato, '#checkChocollato')
         isVisibleResume = true
     }    
     
     if (haveChocolatto && quantityChocollato == 0) {
-        alertSelectAmountCoffee()
+        checkMensage('#checkChocollato', 'Informe a quantidade de Café de Chocolate')
     }  
 
     if (!haveChocolatto && quantityChocollato > 0) {
-        alertSelectCoffee()
-    }  
+        checkMensage('#checkChocollato', 'Marque o Café')
+    } 
+    
+      /*                Capuccino         */
 
     if (haveCapuccino && quantityCapuccino > 0) {
-        const p = document.createElement('p')
-        p.innerText = `Capuccino Avelã - ${quantityCapuccino}`
-        divItemCoffe.appendChild(p)
-        
+        OrderSummary('Cappucino Avelã', quantityCapuccino, '#checkCapuccino')
         isVisibleResume = true
     }
     
     if (haveCapuccino && quantityCapuccino == 0) {
-        alertSelectAmountCoffee()
+        checkMensage('#checkCapuccino', 'Informe a quantidade de Café de avelã')
     }  
 
     if (!haveCapuccino && quantityCapuccino > 0) {
-        alertSelectCoffee()
+        checkMensage('#checkCapuccino', 'Marque o Capuccino de avelã')
     }
 
-    if (haveEspresso && quantityEspresso > 0) {
-        const p = document.createElement('p')
-        p.innerText = `Espresso - ${quantityEspresso}`
-        divItemCoffe.appendChild(p)
+    /*                Espresso         */
 
+    if (haveEspresso && quantityEspresso > 0) {
+        OrderSummary('Espresso', quantityEspresso, '#checkEspresso')
         isVisibleResume = true
     }
 
     if (haveEspresso && quantityEspresso == 0) {
-        alertSelectAmountCoffee()
+        checkMensage('#checkEspresso', 'Informe a quantidade de Café Espresso')
     }  
 
     if (!haveEspresso && quantityEspresso > 0) {
-        alertSelectCoffee()
+        checkMensage('#checkEspresso', 'Marque o Café Espresso')
     } 
 
-    if (haveLatte && quantityLatte > 0) {
-        const p = document.createElement('p')
-        p.innerText = `Latte - ${quantityLatte}`
-        divItemCoffe.appendChild(p)        
+      /*                Latte       */
 
-        isVisibleResume = true        
+    if (haveLatte && quantityLatte > 0) {
+        OrderSummary('Latte', quantityLatte, '#checkLatte')
+        isVisibleResume = true       
     }
 
     if (haveLatte && quantityLatte == 0) {
-        alertSelectAmountCoffee()
+        checkMensage('#checkLatte', 'Informe a quantidade de Café Latte')
     }  
 
     if (!haveLatte && quantityLatte > 0) {
-        alertSelectCoffee()
+        checkMensage('#checkLatte', 'Marque o Café Latte')
     } 
 
     if (isVisibleResume) {

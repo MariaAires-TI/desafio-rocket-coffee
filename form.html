@@ -34,28 +34,29 @@
     </header>
 
     <main>
+        <form id="form">       
 
             <div class="data">
                 <h1>Preencha seus dados</h1>
                 <div>
                     <label>Nome:</label>
-                    <input class="input-data" type="text" id="name"  />
+                    <input class="input-data" required type="text" id="name"  />
                 </div>
     
                 <div>
                     <label>E-mail:</label>
-                    <input class="input-data" type="email" id="email" />
+                    <input class="input-data" required type="email" id="email" />
                 </div>
     
                 <div>
                     <label>Contato:</label>            
-                    <input class="input-data"  keyboardType="numeric" minlength="6"
+                    <input class="input-data" required keyboardType="numeric" minlength="6"
                     maxLength="11" placeholder="(84)98135-4525" type="tel" id="contact" >
                 </div>
     
                 <div>
                     <label>Endereço:</label>
-                    <input class="input-data" placeholder="Rua maria carma - bairro chicago - n°22"  type="text" id="address">
+                    <input class="input-data" required placeholder="Rua maria carma - bairro chicago - n°22"  type="text" id="address">
                 </div>
             </div>          
 
@@ -75,8 +76,9 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                        </select>
+                        </select>                        
                     </div>
+                    <div class="checkCoffe" id="checkChocollato"></div>
     
                     <div class="coffe">
                         <label>Capuccino Avelã</label>
@@ -92,6 +94,7 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+                    <div class="checkCoffe" id="checkCapuccino"></div>
     
                     <div class="coffe">
                         <label>Espresso</label>
@@ -107,6 +110,7 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+                    <div class="checkCoffe" id="checkEspresso"></div>
     
                     <div class="coffe">
                         <label>Latte Macchiato</label>
@@ -122,6 +126,7 @@
                             <option value="5">5</option>
                         </select>
                     </div>
+                    <div class="checkCoffe" id="checkLatte"></div>
                 </div>
 
             </div>
@@ -158,6 +163,7 @@
                 </div>
 
             </div>
+        </form>
     </main>
 
    <script src="./index.js"></script>
