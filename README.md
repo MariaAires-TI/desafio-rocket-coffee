@@ -18,15 +18,6 @@ adquiridos no curso de testes automatizados com cypress, adicionei ao projeto um
 ![Demo](https://media.giphy.com/media/kRfqhEGwRKDlC5quaS/giphy.gif "Demo")
 
 
-## 🚀 Sobre mim
-Sou mestra em química, formada pelo Universidade Federal do Rio Grande do Norte (2021). 
-Por incentivo do meu esposo que é desenvolvedor de software, resolvi migrar para área de tecnologia. 
-Ao fazer cursos nas plataformas Rocketseat e Udemy(Automação de testes com o cypress), 
-me identifiquei com a área e por isso, com objetivo de aprofundar os estudos, esse ano iniciei
-uma pós graduação em desenvolvimento web full stake.
-
-
-
 ## Referência
 
  - [Desafio: RocketCoffee](https://app.rocketseat.com.br/discover/challenges/rocketcoffee)
