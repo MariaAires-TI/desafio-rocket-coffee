@@ -9,7 +9,7 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   margin-top: 50px;    
 }
@@ -19,15 +19,13 @@ nav {
   justify-content: space-between;     
 }
 
-.card {    
-  margin-left: 280px;
-}
   
 ul {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 30px;
+  padding: 0px 40px;
 }
 
 ul > li {
@@ -45,7 +43,6 @@ ul > li {
   cursor: pointer;
   background-color: transparent;
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
-  margin-right: 200px;
   font-family: 'Manrope';
   font-size: 11px;
   letter-spacing: 0.02em;
@@ -108,4 +105,25 @@ h2 {
   letter-spacing: -0.03em;    
   margin-top: 0px;
   margin-bottom: 0px;        
+}
+
+@media (max-width: 900px) {
+   header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container h1, h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 520px) {
+ 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
 }
